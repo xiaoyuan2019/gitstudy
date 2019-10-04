@@ -14,8 +14,8 @@ class Get_arp1(threading.Thread):
             cisco_sw = {
                 'device_type': 'cisco_ios',
                 'ip': ip,
-                'username': 'huzuwei',
-                'password': 'fhwfhw123!!',
+                'username': 'zhangsan',
+                'password': '123456',
             }
             sw_connect = ConnectHandler(**cisco_sw)
             # net_connect = ConnectHandler(device_type='cisco_ios',host='IP地址',username='用户名',password='密码')
