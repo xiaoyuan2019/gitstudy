@@ -267,5 +267,24 @@ Git与集中式版本管理系统不同的是，多了个暂存区的概念，�
 
 ## 六、本地仓库和GitHub仓库互访
 
-1.
+##### 1.本地仓库生成ssh公钥
 
+![1570153827408](C:\Users\Administrator.USER-20190313EO\AppData\Roaming\Typora\typora-user-images\1570153827408.png)
+
+##### 2.登录GitHub，新建ssh key
+
+如下图所示：
+
+![1570155488421](C:\Users\Administrator.USER-20190313EO\AppData\Roaming\Typora\typora-user-images\1570155488421.png)
+
+点击右边的  New SSH key，把刚才在本地仓库生成的ssh 公钥 内容复制进去保存即可。
+
+![1570156194036](C:\Users\Administrator.USER-20190313EO\AppData\Roaming\Typora\typora-user-images\1570156194036.png)
+
+![1570156270406](C:\Users\Administrator.USER-20190313EO\AppData\Roaming\Typora\typora-user-images\1570156270406.png)
+
+完成后，可看到如下界面：
+
+![1570156596681](C:\Users\Administrator.USER-20190313EO\AppData\Roaming\Typora\typora-user-images\1570156596681.png)
+
+至此，本地仓库和GitHub远程仓库可互相连接了。。。
