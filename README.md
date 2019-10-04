@@ -334,7 +334,9 @@ git push origin master
 
 解决办法是先将远程仓库的修改同步到本地，命令是git pull，然后再执行git push origin master即可。
 
-![1570174139867](C:\python项目备份\备份20190823\gitstudy\img\1570174139867.png)
+![1570174520204](C:\python项目备份\备份20190823\gitstudy\img\1570174520204.png)
+
+![1570174549813](C:\python项目备份\备份20190823\gitstudy\img\1570174549813.png)
 
 
 
