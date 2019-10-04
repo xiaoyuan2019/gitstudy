@@ -2,7 +2,7 @@
 
 ## 一、示意图
 
-![1568079388406](C:\Users\Administrator.USER-20190313EO\AppData\Roaming\Typora\typora-user-images\1568079388406.png)
+![1568079388406](C:\python项目备份\备份20190823\gitstudy\img\1568079388406.png)
 
 说明：
 
@@ -22,7 +22,7 @@
 
 新建空文件夹gitstudy，并进入该文件夹运行命令：git init，如下图所示：
 
-![1568079884510](C:\Users\Administrator.USER-20190313EO\AppData\Roaming\Typora\typora-user-images\1568079884510.png)
+![1568079884510](C:\python项目备份\备份20190823\gitstudy\img\1568079884510.png)
 
 ​        执行命令后，会提示初始化空的git版本仓库，并自动生成一个隐藏文件夹.git，包含git的各种配置文件和依赖环境，不懂git的同学，务必不要随意更改此文件夹中的任何内容。
 
@@ -40,13 +40,13 @@
 
 使用命令：git status 查看工作区状态，有没有文件、文件有没有被跟踪、文件有没有被修改等等，如下图所示：
 
-![1568080074303](C:\Users\Administrator.USER-20190313EO\AppData\Roaming\Typora\typora-user-images\1568080074303.png)
+![1568080074303](C:\python项目备份\备份20190823\gitstudy\img\1568080074303.png)
 
 ​         可以看到，没有任何可以提交的文件，提示要先创建或复制文件并且使用命令add进行跟踪，下面创建新的文件1.html。
 
 ​         git status -s：可以让输出更简洁明了。
 
-![1568086235669](C:\Users\Administrator.USER-20190313EO\AppData\Roaming\Typora\typora-user-images\1568086235669.png)
+![1568086235669](C:\python项目备份\备份20190823\gitstudy\img\1568086235669.png)
 
 
 
@@ -54,11 +54,11 @@
 
 创建空文件1.html，并加入git跟踪与管理，使用命令：git add 文件名，如下图所示：
 
-![1568080595113](C:\Users\Administrator.USER-20190313EO\AppData\Roaming\Typora\typora-user-images\1568080595113.png)
+![1568080595113](C:\python项目备份\备份20190823\gitstudy\img\1568080595113.png)
 
 ​           使用git status可以看到文件1.html已经成功加入到暂存区受git跟踪了，这里的跟踪是指文件状态跟踪，如下图所示：
 
-![1568080696967](C:\Users\Administrator.USER-20190313EO\AppData\Roaming\Typora\typora-user-images\1568080696967.png)
+![1568080696967](C:\python项目备份\备份20190823\gitstudy\img\1568080696967.png)
 
 untracked：文件还在工作区，未添加进暂存区，未使用命令add；
 
@@ -76,7 +76,7 @@ staged：文件被加入暂存区；
 
 使用命令git commit可以将暂存区文件提交至本地仓库，参数-m对此次文件提交作文字说明，作为负责任的程序员，这个必须加上，这样在排错、回退的时候，可以知道这个文件修改了什么。
 
-![1568082585134](C:\Users\Administrator.USER-20190313EO\AppData\Roaming\Typora\typora-user-images\1568082585134.png)
+![1568082585134](C:\python项目备份\备份20190823\gitstudy\img\1568082585134.png)
 
 ​          commit之前没有设置用户名和邮箱，所以默认设置了root，可以使用参数--reset-author重新设置。此时暂存区文件1.html已经被保存进本地仓库了。
 
@@ -86,7 +86,7 @@ staged：文件被加入暂存区；
 
 使用命令git log可以查看详细的提交事件，包括版本号、作者、时间、描述，如下图所示：
 
-![1568082776917](C:\Users\Administrator.USER-20190313EO\AppData\Roaming\Typora\typora-user-images\1568082776917.png)
+![1568082776917](C:\python项目备份\备份20190823\gitstudy\img\1568082776917.png)
 
 版本号是唯一的，后面可以用于回退和跳转。
 
@@ -96,7 +96,7 @@ staged：文件被加入暂存区；
 
 使用命令git reflog可以查看到所有历史事件，包含各种回退和跳转。
 
-![1568087643844](C:\Users\Administrator.USER-20190313EO\AppData\Roaming\Typora\typora-user-images\1568087643844.png)
+![1568087643844](C:\python项目备份\备份20190823\gitstudy\img\1568087643844.png)
 
 `[root@localhost gitstudy]# git reflog`
 `3377df6 HEAD@{0}: reset: moving to HEAD^`
@@ -109,7 +109,7 @@ staged：文件被加入暂存区；
 
 该命令可以以单行打印的简略信息展现出操作记录
 
-![1568093566619](C:\Users\Administrator.USER-20190313EO\AppData\Roaming\Typora\typora-user-images\1568093566619.png)
+![1568093566619](C:\python项目备份\备份20190823\gitstudy\img\1568093566619.png)
 
 
 
@@ -117,7 +117,7 @@ staged：文件被加入暂存区；
 
 使用该命令可以查看工作区和暂存区的文件内容区别，比如a.html文件之前已经add进暂存区了，后来修改了这个文件内容，但没有执行add命令。
 
-![1568086983661](C:\Users\Administrator.USER-20190313EO\AppData\Roaming\Typora\typora-user-images\1568086983661.png)
+![1568086983661](C:\python项目备份\备份20190823\gitstudy\img\1568086983661.png)
 
 再次执行add命令，将修改后的文件加入暂存区，然后使用git diff查看文件区别，结果显示没区别，说明工作区文件的修改已经同步到暂存区了。
 
@@ -129,7 +129,7 @@ staged：文件被加入暂存区；
 
 使用该命令可以查看工作区文件和本地仓库最新版本文件的内容差别，比如修改后的a.html还没用add进暂存区，使用该命令查看本地仓库中的a.html与工作区的a.html有何差别。
 
-![1568087166555](C:\Users\Administrator.USER-20190313EO\AppData\Roaming\Typora\typora-user-images\1568087166555.png)
+![1568087166555](C:\python项目备份\备份20190823\gitstudy\img\1568087166555.png)
 
 执行commit命令，将暂存区的文件a.html提交至本地仓库，然后执行命令git diff HEAD查看两者区别，结果显示无区别，说明已经将暂存区文件同步到本地仓库了。
 
@@ -139,13 +139,13 @@ staged：文件被加入暂存区；
 
 对html文件做三次修改三次提交，来测试版本回退和跳转。
 
-![1568086701396](C:\Users\Administrator.USER-20190313EO\AppData\Roaming\Typora\typora-user-images\1568086701396.png)
+![1568086701396](C:\python项目备份\备份20190823\gitstudy\img\1568086701396.png)
 
 这是第一次修改，后面两次随便添加东西即可。修改完后，使用命令git log查看所有提交的事件。
 
 #### 1.修改事件准备
 
-![1568087579283](C:\Users\Administrator.USER-20190313EO\AppData\Roaming\Typora\typora-user-images\1568087579283.png)
+![1568087579283](C:\python项目备份\备份20190823\gitstudy\img\1568087579283.png)
 
 
 
@@ -153,7 +153,7 @@ staged：文件被加入暂存区；
 
 HEAD表示指针，^表示回退一次，即上一次修改状态，我们执行一下这个命令，如下所示：
 
-![1568094002390](C:\Users\Administrator.USER-20190313EO\AppData\Roaming\Typora\typora-user-images\1568094002390.png)
+![1568094002390](C:\python项目备份\备份20190823\gitstudy\img\1568094002390.png)
 
 当要回退到以前第10个版本时，我们不可能在HEAD后面加10个^，因此，有另外一种办法可以直接回退到任一版本，就是--hard后面加事件的版本号(建议写完整的版本号，前6位也行，不过事件多的时候可能会重复)。如git reset --hard bcf98b
 
@@ -161,13 +161,13 @@ HEAD表示指针，^表示回退一次，即上一次修改状态，我们执行
 
 由于之前回退到旧版本后，命令git log显示不出最新版本的版本号，根据这条命令的输出我们无法回到最新版本中。此时，有另外一条命令可以查看到所有事件的版本号，就是git reflog，如下图所示：
 
-![1568094560509](C:\Users\Administrator.USER-20190313EO\AppData\Roaming\Typora\typora-user-images\1568094560509.png)
+![1568094560509](C:\python项目备份\备份20190823\gitstudy\img\1568094560509.png)
 
 这个命令的输出会显示所有操作的事件信息，如要回到最新版本事件，那么只需要找到它的版本号即可。
 
 执行命令：git reset --hard 978c592回退到最新版本
 
-![1568098658007](C:\Users\Administrator.USER-20190313EO\AppData\Roaming\Typora\typora-user-images\1568098658007.png)
+![1568098658007](C:\python项目备份\备份20190823\gitstudy\img\1568098658007.png)
 
 
 
@@ -179,21 +179,21 @@ HEAD表示指针，^表示回退一次，即上一次修改状态，我们执行
 
 此时执行命令git status其实已经显示了如何撤销修改了，如图所示：
 
-![1568101082594](C:\Users\Administrator.USER-20190313EO\AppData\Roaming\Typora\typora-user-images\1568101082594.png)
+![1568101082594](C:\python项目备份\备份20190823\gitstudy\img\1568101082594.png)
 
 执行命令：git checkout -- b.md，结果如下：
 
-![1568101253206](C:\Users\Administrator.USER-20190313EO\AppData\Roaming\Typora\typora-user-images\1568101253206.png)
+![1568101253206](C:\python项目备份\备份20190823\gitstudy\img\1568101253206.png)
 
 **撤销情景二：工作区文件被修改且执行add操作但没commit。**
 
 如下图所示：提示使用命令git reset HEAD filename可以撤销已经加入暂存区的文件修改。
 
-![1568102069336](C:\Users\Administrator.USER-20190313EO\AppData\Roaming\Typora\typora-user-images\1568102069336.png)
+![1568102069336](C:\python项目备份\备份20190823\gitstudy\img\1568102069336.png)
 
 执行命令：git reset HEAD b.md，可以将文件撤销到未加入暂存区，如下图所示：
 
-![1568102258388](C:\Users\Administrator.USER-20190313EO\AppData\Roaming\Typora\typora-user-images\1568102258388.png)
+![1568102258388](C:\python项目备份\备份20190823\gitstudy\img\1568102258388.png)
 
 此时文件跟情景一一致了，然后使用命令git checkout -- b.md可彻底撤销。
 
@@ -203,15 +203,15 @@ HEAD表示指针，^表示回退一次，即上一次修改状态，我们执行
 
 删除文件a.html进行测试，可以看到当前工作区的状态，因为文件已经在本地仓库中，删除后工作区和本地仓库文件状态不同步，需要同步到本地仓库。此时可以通过命令git diff和git diff HEAD查看文件区别。
 
-![1568107425072](C:\Users\Administrator.USER-20190313EO\AppData\Roaming\Typora\typora-user-images\1568107425072.png)
+![1568107425072](C:\python项目备份\备份20190823\gitstudy\img\1568107425072.png)
 
 删除操作还未同步到暂存区，如果要撤销删除操作，使用git checkout -- a.html即可，如下图所示，删掉的文件a.html又回来了。
 
-![1568107859810](C:\Users\Administrator.USER-20190313EO\AppData\Roaming\Typora\typora-user-images\1568107859810.png)
+![1568107859810](C:\python项目备份\备份20190823\gitstudy\img\1568107859810.png)
 
 要想继续删除文件，将信息从暂存区同步到本地仓库，根据提示信息，执行同步删除操作的命令：git rm a.html，此时要删除的文件不在工作区和暂存区了，继续执行commit命令，即可删除本地仓库中的文件a.html。
 
-![1568159253865](C:\Users\Administrator.USER-20190313EO\AppData\Roaming\Typora\typora-user-images\1568159253865.png)
+![1568159253865](C:\python项目备份\备份20190823\gitstudy\img\1568159253865.png)
 
 如果此时又不想删除文件了，可以使用命令：git reset HEAD a.html将文件恢复到暂存区，然后再执行：git checkout -- a.html恢复到工作区即可。跟撤销修改操作是一样的，分两步恢复。
 
@@ -288,3 +288,47 @@ Git与集中式版本管理系统不同的是，多了个暂存区的概念，�
 ![1570156596681](C:\python项目备份\备份20190823\gitstudy\img\1570156596681.png)
 
 至此，本地仓库和GitHub远程仓库可互相连接了。。。
+
+
+
+##### 3.创建GitHub远程仓库
+
+这个仓库名称必须和本地仓库的名称相同才能push
+
+![1570158569764](C:\python项目备份\备份20190823\gitstudy\img\1570158569764.png)
+
+![1570158777711](C:\python项目备份\备份20190823\gitstudy\img\1570158777711.png)
+
+##### 4.同步本地仓库和GitHub远程仓库
+
+根据上图所示，使用两条命令，可以将本地仓库中的文件同步到GitHub远程仓库中
+
+命令一：`git remote add origin git@github.com:xiaoyuan2019/testgit.git`
+
+解释：git remote，就是管理远程仓库的意思，add origin，就是添加远程库的意思，origin是可以改的，只是给远程库取个名字而已，然后后面的一大串就是远程库的地址，这是Github直接提供给我们的，当我们输入了这条命令之后，肯定没有反应的。因为这条命令相当于告诉Git有这么一个远程仓库，接下来就是正式地推送步骤。
+
+命令二：`git push -u origin master`
+
+解释：将master分支的这个Git仓库推送到远程库，当你输入的时候，因为你是第一次使用Git与Github，会有个SSH链接让你确定是否信任，直接输入yes就可以，以后不会再询问。而那个-u是一个初始参数，因为我们是第一次推送，这样做是将本地Git仓库与Github上远程仓库给关联起来。
+
+此时，刷新一下GitHub仓库页面，就会发现本地仓库的文件已经同步到GitHub了。
+
+![1570159165902](C:\python项目备份\备份20190823\gitstudy\img\1570159165902.png)
+
+##### 5.修改本地仓库
+
+修改同步很简单，在本地仓库中修改文件，经过一通add\commit\push后，刷新GitHub页面，就可以看到修改的内容已经同步到远程仓库了。
+
+```python
+git add
+git commit -m '修改了第58行的标题'
+git push origin master
+```
+
+##### 6.克隆
+
+所谓的克隆项目，实际上就是与上面相反的过程，上面是从本地仓库推送同步到Github仓库，使用了git push，
+
+克隆意思是从GitHub远程仓库把文件复制到本地来，使用git clone。
+
+我们进入GitHub的gitstudy仓库，点击右上角的clone即可
