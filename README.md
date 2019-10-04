@@ -340,6 +340,5 @@ git push origin master
 
 等下载完成后，可以看到文件夹gitstudy以及里面的文件了。
 
-![1570160914501](C:\Users\Administrator.USER-20190313EO\AppData\Roaming\Typora\typora-user-images\1570160914501.png)
+![1570160914501](C:\python项目备份\备份20190823\gitstudy\img\1570160914501.png)
 =======
->>>>>>> eda2a5eeb9419beca27083cf79936984ae970a8c
