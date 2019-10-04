@@ -331,4 +331,12 @@ git push origin master
 
 克隆意思是从GitHub远程仓库把文件复制到本地来，使用git clone。
 
-我们进入GitHub的gitstudy仓库，点击右上角的clone即可
+我们进入GitHub的gitstudy仓库，点击右上角的clone即可。（路径下不能存在跟需要clone的远程仓库同名文件夹）
+
+![1570160703050](C:\python项目备份\备份20190823\gitstudy\img\1570160703050.png)
+
+在本地执行命令：`git clone git@github.com:xiaoyuan2019/gitstudy.git`
+
+等下载完成后，可以看到文件夹gitstudy以及里面的文件了。
+
+![1570160914501](C:\Users\Administrator.USER-20190313EO\AppData\Roaming\Typora\typora-user-images\1570160914501.png)
