@@ -41,9 +41,7 @@ if __name__ == "__main__":
         queues.put(i)
 
     for i in range(len(ip_list)):
-        # print("starting the {} ".format(i))
         threads.append(Get_arp1(queues))
-    # print(threads)
 
     for i in threads:
         i.start()
