@@ -446,7 +446,7 @@ git push origin master
 
 多人开发时，每个人必须在master分支上各自建立自己的分支，这样每个人都是独立开发，不会互相影响，更不会影响到master分支。当各自的分支开发完后，经过add\commit后，切换到master分支进行合并操作git merge A，将自己的分支内容合并进master主分支，这样就完成了协同开发的目的。如果在开发过程中，自己要去帮助同事解决他分支中的Bug问题，那么自己首先利用git stash隐藏自己的工作区，然后切换至同事的分支，为了避免影响同事的开发内容，最好自己在同事的分支基础上再新建一个专门解决bug的分支，当bug解决完后，切换回同事分支进行合并即可。
 
-##### 2.总结
+##### 2.总结（一）
 
 当你合并分支的时候遇到冲突，修改冲突以后再add+commit，即可合并成功。
 
@@ -456,11 +456,7 @@ git merge --no-ff -m "commit时所需要解释的语句" 被合并分支的名�
 
 （例如：git merge --no-ff -m "modify readme.md with no-ff" A）
 
- 
-
 一条又臭又长的查看分支日志，但你又不得不去使用：git log --graph --pretty=oneline --abbrev-commit
-
- 
 
 当你在手头的工作没完成的时候，你必须要去另外一个分支去干活，这个时候你需要git stash保留工作现场
 
@@ -468,6 +464,47 @@ git merge --no-ff -m "commit时所需要解释的语句" 被合并分支的名�
 
 然后干完活以后直接git stash pop出栈恢复工作现场
 
- 
-
 删除你已经工作好的分支的时候，是输入git branch -D 分支的名字，参数是大写的D。
+
+##### 3.总结（二）
+
+当你和你的同事在对于项目的同一个分支开发的时候，你的同事先你一步提交推送
+
+而你准备推送上去的时候，却遇到报错，远程库已经更新，于是你只能
+
+1）先与远程仓库的那个分支取得联系：git branch --set-upstream-to=origin/dev dev
+
+2）然后将远程仓库最新内容同步到本地：git pull
+
+3）遇到合并后的冲突提醒，你于是就修改文件，然后提交：add + commit
+
+4）这个时候，你觉得，相关日志里面应该并到一次记录：git rebase
+
+5）然后你就可以将最终版本推送到远程仓库了：git push origin dev
+
+但是别忘了一切始于开头，到底怎么参与远程仓库某一个分支的协作开发呢？
+
+1）先把项目克隆到本地来：git clone [git@github.com](mailto:git@github.com):Masterpaopao/learngit.git
+
+2）然后创建并切换到你要参与协作的指定远程分支：git checkout -b dev origin/dev
+
+
+
+## 九、标签管理
+
+##### 1.创建标签
+
+当对一个改动进行add、commit后，可以跟上命令：git tag v1.0，这样就对当前提交的版本打上了tag v1.0，之后就可以通过标签将该版本同步到远程仓库了，如：`git push origin v1.0`
+
+![1570269435740](C:\python项目备份\备份20190823\gitstudy\img\1570269435740.png)
+
+![1570269411014](C:\python项目备份\备份20190823\gitstudy\img\1570269411014.png)
+
+通过标签可以查看该版本的详细信息，命令：git show v1.0
+
+![1570269485382](C:\python项目备份\备份20190823\gitstudy\img\1570269485382.png)
+
+##### 2.删除标签
+
+命令：`git tag -d v1.0`
+
