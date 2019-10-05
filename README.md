@@ -387,3 +387,15 @@ git push origin master
 
 ##### 3.在分支xiaoyuan上修改文件并查看状态
 
+修改文件并进行add、commit操作，此时是在分支xiaoyuan上进行的操作，不会影响master主分支的数据。
+
+![1570237814047](C:\python项目备份\备份20190823\gitstudy\img\1570237814047.png)
+
+此时，可以同步分支xiaoyuan到远程仓库中，发现是同步不了的，因为远程仓库中不存在分支xiaoyuan。
+
+##### 4.合并分支
+
+将分支xiaoyuan合并到主分支master中，前提是分支xiaoyuan中的文件都commit过，否则无法切换到主分区master中。
+
+![1570238492329](C:\python项目备份\备份20190823\gitstudy\img\1570238492329.png)
+
