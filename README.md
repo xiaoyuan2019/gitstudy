@@ -420,4 +420,4 @@ git push origin master
 
 继续回到当前分支进行工作区任务开发，怎么恢复隐藏工作区任务？
 
-使用命令：git stash pop（相当于两条命令：git stash apply 和 git stash drop）恢复工作区并删除隐藏任务索引
+使用命令：git stash pop（相当于两条命令：git stash apply 和 git stash drop）恢复工作区并删除隐藏任务
