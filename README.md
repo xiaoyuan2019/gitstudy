@@ -393,9 +393,18 @@ git push origin master
 
 此时，可以同步分支xiaoyuan到远程仓库中，发现是同步不了的，因为远程仓库中不存在分支xiaoyuan。
 
-##### 4.合并分支
+##### 4.合并分支、删除分支
 
-将分支xiaoyuan合并到主分支master中，前提是分支xiaoyuan中的文件都commit过，否则无法切换到主分区master中。
+将分支xiaoyuan合并到主分支master中，前提是分支xiaoyuan中的文件都commit过，否则无法切换到主分区master中，如下图所示：
 
 ![1570238492329](C:\python项目备份\备份20190823\gitstudy\img\1570238492329.png)
 
+当我们add、commit后，就可以直接在分支test中切换到master中，然后我们在master中进行分支合并，如下：
+
+![1570238703185](C:\python项目备份\备份20190823\gitstudy\img\1570238703185.png)
+
+切换成功。注意：当我们切换到master中时，文件内容会回到master中，而不是在分支test中的状态，当我们合并成功后，文件内容会立即更新回最新状态，因为这时分支test中的修改已经同步到主分支master中了。我们可以打开md文件，观察切换和合并分支时，md文件会出现两次闪烁的状态，随后去查看md文件内容，可以发现正好是切换前和切换后的内容更新导致的。
+
+合并完成后，分支test和xiaoyuan不再需要了，可以直接删除掉。
+
+![1570238991676](C:\python项目备份\备份20190823\gitstudy\img\1570238991676.png)
