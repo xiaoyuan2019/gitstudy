@@ -383,6 +383,8 @@ git push origin master
 
 查看分支：`git branch`
 
+创建分支并切换到分支：`git branch -b 分支名称`
+
 ![1570235887364](img/1570235887364.png).
 
 ##### 3.在分支xiaoyuan上修改文件并查看状态
@@ -406,8 +408,6 @@ git push origin master
 切换成功。注意：当我们切换到master中时，文件内容会回到master中，而不是在分支test中的状态，当我们合并成功后，文件内容会立即更新回最新状态，因为这时分支test中的修改已经同步到主分支master中了。我们可以打开md文件，观察切换和合并分支时，md文件会出现两次闪烁的状态，随后去查看md文件内容，可以发现正好是切换前和切换后的内容更新导致的。
 
 合并完成后，分支test和xiaoyuan不再需要了，可以直接删除掉。
-
-<<<<<<< HEAD
 ![1570238991676](C:\python项目备份\备份20190823\gitstudy\img\1570238991676.png)
 
 ##### 5.切换分支
@@ -421,3 +421,24 @@ git push origin master
 继续回到当前分支进行工作区任务开发，怎么恢复隐藏工作区任务？
 
 使用命令：git stash pop（相当于两条命令：git stash apply 和 git stash drop）恢复工作区并删除隐藏任务
+
+##### 6.分支命令总结
+
+查看所有的分支：git branch
+
+创建并切换到新的分支：git checkout -b
+
+合并某分支到当前分支：git merge
+
+删除掉指定的分支：git branch -d
+
+创建分支：git branch
+
+切换分支：git checkout
+
+隐藏当前工作区：git stash
+
+
+
+## 八、协作分支
+
